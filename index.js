@@ -1,28 +1,40 @@
 const fs = require('fs');
 
-const createDirectory = (dirPath) => {
-    if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true }, (err) => {
-            if (err) throw err;
-            console.log(`Directory ${dirPath} created successfully!`);
-        });
-    } else {
-        console.log(`Directory ${dirPath} already exists.`);
-    }
+// const createDirectory = (dirPath) => {
+//     if (!fs.existsSync(dirPath)) {
+//         fs.mkdirSync(dirPath, { recursive: true }, (err) => {
+//             if (err) throw err;
+//             console.log(`Directory ${dirPath} created successfully!`);
+//         });
+//     } else {
+//         console.log(`Directory ${dirPath} already exists.`);
+//     }
+// };
+const fs = require('fs');
+const path = require('path');
+
+const createDirectories = () => {
+    const baseDir = __dirname;
+    const directories = ['controllers', 'models', 'routes', 'utils', 'public'];
+
+    directories.forEach(dir => {
+        const fullPath = path.join(baseDir, dir);
+        if (!fs.existsSync(fullPath)) {
+            fs.mkdirSync(fullPath, { recursive: true }, (err) => {
+                if (err) throw err;
+                console.log(`Directory '${dir}' created successfully in ${fullPath}`);
+            });
+        } else {
+            console.log(`Directory '${dir}' already exists in ${fullPath}`);
+        }
+    });
 };
 
-// Create main directories
-createDirectory('controllers');
-createDirectory('models');
-createDirectory('routes');
-createDirectory('utils');
-createDirectory('public');
 
-
-createDirectory('public/javascript');
-createDirectory('public/styles');
-createDirectory('public/images');
-createDirectory('public/videos');
+createDirectories('public/javascript');
+createDirectories('public/styles');
+createDirectories('public/images');
+createDirectories('public/videos');
 
 
 
