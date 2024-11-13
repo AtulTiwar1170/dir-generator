@@ -1,16 +1,4 @@
 const fs = require('fs');
-
-// const createDirectory = (dirPath) => {
-//     if (!fs.existsSync(dirPath)) {
-//         fs.mkdirSync(dirPath, { recursive: true }, (err) => {
-//             if (err) throw err;
-//             console.log(`Directory ${dirPath} created successfully!`);
-//         });
-//     } else {
-//         console.log(`Directory ${dirPath} already exists.`);
-//     }
-// };
-const fs = require('fs');
 const path = require('path');
 
 const createDirectories = () => {
