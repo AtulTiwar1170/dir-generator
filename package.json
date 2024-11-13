@@ -1,0 +1,22 @@
+{
+  "name": "dir-generator",
+  "version": "1.0.0",
+  "description": "This package help to set up folder structure for backEnd project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtulTiwar1170/dir-generator.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Atul Tiwari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AtulTiwar1170/dir-generator/issues"
+  },
+  "homepage": "https://github.com/AtulTiwar1170/dir-generator#readme"
+}
