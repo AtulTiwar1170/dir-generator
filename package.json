@@ -1,6 +1,6 @@
 {
   "name": "dir-generator",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "This package help to set up folder structure for backEnd project",
   "main": "index.js",
   "scripts": {

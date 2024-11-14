@@ -19,7 +19,7 @@ const path = require('path');
 // };
 const createDirectory = (dirPath) => {
     if (!fs.existsSync(dirPath)) {
-        const Folder = path.join(__dirname, '../', dirPath);
+        const Folder = path.join(__dirname, '../../', dirPath);
         fs.mkdirSync(Folder, { recursive: true }, (err) => {
             if (err) throw err;
             console.log(`Directory ${Folder} created successfully!`);
