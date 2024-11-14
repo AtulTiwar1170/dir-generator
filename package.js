@@ -19,12 +19,13 @@ const path = require('path');
 // };
 const createDirectory = (dirPath) => {
     if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true }, (err) => {
+        const Folder = path.join(__dirname, '..', 'dirPath');
+        fs.mkdirSync(Folder, { recursive: true }, (err) => {
             if (err) throw err;
-            console.log(`Directory ${dirPath} created successfully!`);
+            console.log(`Directory ${Folder} created successfully!`);
         });
     } else {
-        console.log(`Directory ${dirPath} already exists.`);
+        console.log(`Directory ${Folder} already exists.`);
     }
 };
 
